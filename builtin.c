@@ -2,12 +2,11 @@
 
 /**
  * _myexit - exits the shell
- * @info: Structure containing potential arguments. Used to maintain
+ * @info: Structure with potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: exits with a given exit status
- *         (0) if info.argv[0]!= "exit"
+ *         (0) if info.argv[0] != "exit"
  */
-
 int _myexit(info_t *info)
 {
 	int exitcheck;
@@ -18,7 +17,7 @@ int _myexit(info_t *info)
 		if (exitcheck == -1)
 		{
 			info->status = 2;
-			print_error(info, "Illegal snumber: ");
+			print_error(info, "Illegal number: ");
 			_eputs(info->argv[1]);
 			_eputchar('\n');
 			return (1);
@@ -31,12 +30,11 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current dir of the process
- * @info: Used to maintain constant function prototype. Structure
- *          containing potential arguments.
+ * _mycd - changes the current directory of the process
+ * @info: Structure with potential arguments. Used to maintain
+ *          constant function prototype.
  *  Return: Always 0
  */
-
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
@@ -83,11 +81,10 @@ int _mycd(info_t *info)
 
 /**
  * _myhelp - changes the current directory of the process
- * @info: Used to maintain constant function prototype. Structure
- *          containing potential arguments.
+ * @info: Structure with potential arguments. Used to maintain
+ *          constant function prototype.
  *  Return: Always 0
  */
-
 int _myhelp(info_t *info)
 {
 	char **arg_array;

@@ -92,7 +92,7 @@ int _myalias(info_t *info)
 {
 	int i = 0;
 	char *p = NULL;
-	list_t *node = vi NULL;
+	list_t *node = NULL;
 
 	if (info->argc == 1)
 	{
